@@ -16,8 +16,8 @@ public class MemeTokenRepository implements IMemeTokenRepository {
     }
 
     @Override
-    public MemeToken findByNumber(int number) {
-        return IOMemeTokenFile.findMemeTokenByNumber(number);
+    public MemeToken findByCode(String code) {
+        return IOMemeTokenFile.findMemeTokenByCode(code);
     }
 
     @Override

@@ -1,17 +1,18 @@
 package model;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Token {
-    private int number;
+    private String code;
     private String symbol;
     private String name;
     private double price;
     private LocalDate date;
     private double amount;
 
-    public Token(int number, String symbol, String name, double price, LocalDate date, double amount) {
-        this.number = number;
+    public Token(String code, String symbol, String name, double price, LocalDate date, double amount) {
+        this.code = code;
         this.symbol = symbol;
         this.amount = amount;
         this.date = date;
@@ -19,12 +20,12 @@ public class Token {
         this.name = name;
     }
 
-    public int getNumber() {
-        return number;
+    public String getCode() {
+        return code;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getSymbol() {
@@ -69,12 +70,12 @@ public class Token {
 
     @Override
     public String toString() {
-        return  "number=" + number +
+        return  "code=" + code +
                 ", symbol='" + symbol + '\'' +
                 ", name='" + name + '\'' +
-                ", price=" + price +
+                ", price=" + price + "$" +
                 ", date=" + date +
-                ", amount=" + amount +
+                ", amount=" + amount + "$" +
                 ", ";
     }
 }

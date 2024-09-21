@@ -1,12 +1,13 @@
 package model;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class TechnologyToken extends Token {
     private String technologyType;
 
-    public TechnologyToken(int number, String symbol, String name, double price, LocalDate date, double amount, String technologyType) {
-        super(number,symbol, name, price, date, amount);
+    public TechnologyToken(String code, String symbol, String name, double price, LocalDate date, double amount, String technologyType) {
+        super(code,symbol, name, price, date, amount);
         this.technologyType = technologyType;
     }
 

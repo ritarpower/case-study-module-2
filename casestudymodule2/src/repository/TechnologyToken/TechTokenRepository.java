@@ -17,13 +17,13 @@ public class TechTokenRepository implements ITechTokenRepository{
     }
 
     @Override
-    public TechnologyToken findByNumber(int number) {
-        return IOTechTokenFile.findTechnologyTokenByNumber(number);
+    public TechnologyToken findByCode(String code) {
+        return IOTechTokenFile.findTechnologyTokenByCode(code);
     }
 
     @Override
     public void update(TechnologyToken technologyToken) {
-        IOTechTokenFile.writeTechTokenToFile(technologyToken);
+        IOTechTokenFile.editTechnologyToken(technologyToken);
     }
 
     @Override

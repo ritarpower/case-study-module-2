@@ -19,17 +19,17 @@ public class TechTokenService implements ITechTokenService {
     }
 
     @Override
-    public TechnologyToken findByNumber(int number) {
-        return techTokenRepository.findByNumber(number);
+    public TechnologyToken findByCode(String code) {
+        return techTokenRepository.findByCode(code);
     }
 
     @Override
-    public void update(TechnologyToken technologyToken) {
-        techTokenRepository.update(technologyToken);
+    public void update(TechnologyToken techToken) {
+        techTokenRepository.update(techToken);
     }
 
     @Override
-    public void delete(TechnologyToken technologyToken) {
-        techTokenRepository.delete(technologyToken);
+    public void delete(TechnologyToken techToken) {
+        techTokenRepository.delete(techToken);
     }
 }

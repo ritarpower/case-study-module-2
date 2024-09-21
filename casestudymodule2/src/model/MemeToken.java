@@ -1,12 +1,13 @@
 package model;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class MemeToken extends Token {
     private String memeType;
 
-    public MemeToken(int number, String symbol, String name, double price, LocalDate date, double amount, String memeType) {
-        super(number, symbol, name, price, date, amount);
+    public MemeToken(String code, String symbol, String name, double price, LocalDate date, double amount, String memeType) {
+        super(code, symbol, name, price, date, amount);
         this.memeType = memeType;
     }
 

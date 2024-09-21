@@ -19,8 +19,8 @@ public class MemeTokenService implements IMemeTokenService {
     }
 
     @Override
-    public MemeToken findByNumber(int number) {
-        return memeTokenRepository.findByNumber(number);
+    public MemeToken findByCode(String code) {
+        return memeTokenRepository.findByCode(code);
     }
 
     @Override
