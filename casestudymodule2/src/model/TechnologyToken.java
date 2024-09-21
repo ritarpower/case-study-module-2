@@ -6,7 +6,7 @@ public class TechnologyToken extends Token {
     private String technologyType;
 
     public TechnologyToken(String code, String symbol, String name, double price, LocalDate date, double amount, String technologyType) {
-        super(code,symbol, name, price, date, amount);
+        super(code, symbol, name, price, date, amount);
         this.technologyType = technologyType;
     }
 

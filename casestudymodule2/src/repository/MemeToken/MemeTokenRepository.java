@@ -2,6 +2,7 @@ package repository.MemeToken;
 
 import common.IOMemeTokenFile;
 import model.MemeToken;
+
 import java.util.List;
 
 public class MemeTokenRepository implements IMemeTokenRepository {

@@ -77,7 +77,7 @@ public class IOTechTokenFile {
 
     public static void deleteTechnologyToken(TechnologyToken technologyToken) {
         List<TechnologyToken> tokens = readTechTokenFromFile();
-        for ( int i = 0; i < tokens.size(); i++ ) {
+        for (int i = 0; i < tokens.size(); i++) {
             if (tokens.get(i).getCode().equals(technologyToken.getCode())) {
                 tokens.remove(i);
                 writeTechTokenListToFile(tokens);
@@ -97,37 +97,37 @@ public class IOTechTokenFile {
         }
     }
 
-    public boolean isValidCode(String code){
+    public boolean isValidCode(String code) {
         Pattern pattern = Pattern.compile("^TC-\\d{3}$");
         Matcher matcher = pattern.matcher(code);
         return matcher.matches();
     }
 
-    public boolean isValidSymbol(String symbol){
+    public boolean isValidSymbol(String symbol) {
         Pattern pattern = Pattern.compile("^[A-Z]{3}$");
         Matcher matcher = pattern.matcher(symbol);
         return matcher.matches();
     }
 
-    public boolean isValidName(String name){
+    public boolean isValidName(String name) {
         Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z0-9\\s]*$");
         Matcher matcher = pattern.matcher(name);
         return matcher.matches();
     }
 
-    public boolean isValidPrice(double price){
+    public boolean isValidPrice(double price) {
         Pattern pattern = Pattern.compile("^(0\\.\\d{7,}|[1-9][0-9]*(\\.\\d+)?|0\\.[1-9]\\d*)$");
         Matcher matcher = pattern.matcher(String.valueOf(price));
         return matcher.matches();
     }
 
-    public boolean isValidDate(LocalDate date){
+    public boolean isValidDate(LocalDate date) {
         Pattern pattern = Pattern.compile("^\\d{4}[-|/]\\d{2}[-|/]\\d{2}$");
         Matcher matcher = pattern.matcher(date.toString());
         return matcher.matches();
     }
 
-    public boolean isValidAmount(double amount){
+    public boolean isValidAmount(double amount) {
         Pattern pattern = Pattern.compile("^(?=.[1-9])([0-9]*[.][0-9]+|[1-9][0-9]*|[0-9]+)$");
         Matcher matcher = pattern.matcher(String.valueOf(amount));
         return matcher.matches();

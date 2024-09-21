@@ -8,6 +8,7 @@ import java.util.List;
 
 public class TechTokenService implements ITechTokenService {
     private ITechTokenRepository techTokenRepository = new TechTokenRepository();
+
     @Override
     public List<TechnologyToken> getAll() {
         return techTokenRepository.getAll();

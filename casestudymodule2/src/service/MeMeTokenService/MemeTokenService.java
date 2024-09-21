@@ -8,6 +8,7 @@ import java.util.List;
 
 public class MemeTokenService implements IMemeTokenService {
     private IMemeTokenRepository memeTokenRepository = new MemeTokenRepository();
+
     @Override
     public List<MemeToken> getAll() {
         return memeTokenRepository.getAll();

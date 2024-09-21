@@ -51,8 +51,8 @@ public class IOMemeTokenFile {
                     break;
                 }
                 String[] tokenData = data.split(",");
-                MemeToken memeToken = new MemeToken(tokenData[0], tokenData[1],tokenData[2], Double.parseDouble(tokenData[3]), LocalDate.parse(tokenData[4]),
-                        Double.parseDouble(tokenData[5]),tokenData[6]);
+                MemeToken memeToken = new MemeToken(tokenData[0], tokenData[1], tokenData[2], Double.parseDouble(tokenData[3]), LocalDate.parse(tokenData[4]),
+                        Double.parseDouble(tokenData[5]), tokenData[6]);
                 memeTokens.add(memeToken);
             }
         } catch (FileNotFoundException e) {

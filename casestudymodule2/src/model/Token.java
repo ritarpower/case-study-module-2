@@ -69,7 +69,7 @@ public class Token {
 
     @Override
     public String toString() {
-        return  "code=" + code +
+        return "code=" + code +
                 ", symbol='" + symbol + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price + "$" +

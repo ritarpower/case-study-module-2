@@ -46,8 +46,8 @@ public class MemeTokenController {
         } while (!isValidName(name));
         double price;
 //        do {
-            System.out.println("Nhap gia cua Token($): ");
-            price = Double.parseDouble(sc.nextLine());
+        System.out.println("Nhap gia cua Token($): ");
+        price = Double.parseDouble(sc.nextLine());
 //        } while (!isValidPrice(price));
         LocalDate date;
         do {
@@ -88,8 +88,8 @@ public class MemeTokenController {
             memeToken.setName(name);
             double price;
 //            do {
-                System.out.println("Nhap gia moi cua Token($): ");
-                price = Double.parseDouble(sc.nextLine());
+            System.out.println("Nhap gia moi cua Token($): ");
+            price = Double.parseDouble(sc.nextLine());
 //            } while (!isValidPrice(price));
             memeToken.setPrice(price);
             LocalDate date;
@@ -146,10 +146,10 @@ public class MemeTokenController {
         }
     }
 
-    public boolean isExistCode(String code){
-        List<MemeToken> memeLists =  IOMemeTokenFile.readMemeTokenFromFile();
-        for(MemeToken memeToken : memeLists){
-            if(memeToken.getCode().equals(code)){
+    public boolean isExistCode(String code) {
+        List<MemeToken> memeLists = IOMemeTokenFile.readMemeTokenFromFile();
+        for (MemeToken memeToken : memeLists) {
+            if (memeToken.getCode().equals(code)) {
                 return true;
             }
         }
@@ -174,7 +174,7 @@ public class MemeTokenController {
         return matcher.matches();
     }
 
-    public static boolean isValidPrice(BigDecimal price){
+    public static boolean isValidPrice(BigDecimal price) {
         Pattern pattern = Pattern.compile("^(0\\.(0{0,7}[1-9]\\d*|[1-9]\\d*)|([1-9]\\d*)(\\.\\d+)?)$");
         Matcher matcher = pattern.matcher(String.valueOf(price));
         return matcher.matches();

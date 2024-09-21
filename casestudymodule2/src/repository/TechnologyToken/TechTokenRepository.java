@@ -2,9 +2,10 @@ package repository.TechnologyToken;
 
 import common.IOTechTokenFile;
 import model.TechnologyToken;
+
 import java.util.List;
 
-public class TechTokenRepository implements ITechTokenRepository{
+public class TechTokenRepository implements ITechTokenRepository {
 
     @Override
     public List<TechnologyToken> getAll() {
