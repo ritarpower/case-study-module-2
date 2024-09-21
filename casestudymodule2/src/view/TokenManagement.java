@@ -3,10 +3,7 @@ package view;
 import controller.MemeTokenController;
 import controller.TechTokenController;
 
-import java.math.BigDecimal;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class TokenManagement {
     private static final Scanner sc = new Scanner(System.in);
@@ -16,19 +13,23 @@ public class TokenManagement {
     public void manageMainMenu() {
         do {
             System.out.println("-----CHUONG TRINH QUAN LY GIAO DICH TOKEN-----\n" +
-                    "1.\tQuan ly giao dich Token cong nghe.\n" +
-                    "2.\tQuan ly giao dich Token meme.\n" +
-                    "3.\tKet thuc chuong trinh.\n" +
+                    "1.\tHien thi toan bo giao dich.\n" +
+                    "2.\tQuan ly giao dich Token cong nghe.\n" +
+                    "3.\tQuan ly giao dich Token meme.\n" +
+                    "4.\tKet thuc chuong trinh.\n" +
                     "Nhap vao muc can chon: ");
             int choose = Integer.parseInt(sc.nextLine());
             switch (choose) {
                 case 1:
-                    manageTechTokenMenu();
+                    manageAllMenu();
                     break;
                 case 2:
-                    manageMemeTokenMenu();
+                    manageTechTokenMenu();
                     break;
                 case 3:
+                    manageMemeTokenMenu();
+                    break;
+                case 4:
                     System.exit(0);
                 default:
                     System.out.println("Vui long chon lai!");
@@ -105,6 +106,11 @@ public class TokenManagement {
                     System.out.println("Vui long chon lai!");
             }
         } while (true);
+    }
+
+    public void manageAllMenu() {
+        techTokenController.getAll();
+        memeTokenController.getAll();
     }
 
     public static void main(String[] args) {

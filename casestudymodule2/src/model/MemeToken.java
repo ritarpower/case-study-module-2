@@ -1,6 +1,5 @@
 package model;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class MemeToken extends Token {
@@ -21,7 +20,7 @@ public class MemeToken extends Token {
 
     @Override
     public String toString() {
-        return "MemeToken{" + super.toString() +
+        return "MemeToken\t\t{" + super.toString() +
                 "memeType='" + memeType + '\'' +
                 '}';
     }

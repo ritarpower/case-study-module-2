@@ -1,9 +1,7 @@
 package controller;
 
 import common.IOMemeTokenFile;
-import common.IOTechTokenFile;
 import model.MemeToken;
-import model.TechnologyToken;
 import service.MeMeTokenService.IMemeTokenService;
 import service.MeMeTokenService.MemeTokenService;
 

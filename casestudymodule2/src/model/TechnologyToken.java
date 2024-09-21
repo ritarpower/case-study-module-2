@@ -1,6 +1,5 @@
 package model;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class TechnologyToken extends Token {
@@ -21,7 +20,7 @@ public class TechnologyToken extends Token {
 
     @Override
     public String toString() {
-        return "TechnologyToken{" + super.toString() +
+        return "TechnologyToken {" + super.toString() +
                 "technology='" + technologyType + '\'' +
                 '}';
     }
