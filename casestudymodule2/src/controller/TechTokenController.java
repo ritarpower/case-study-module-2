@@ -5,7 +5,6 @@ import model.TechnologyToken;
 import service.TechTokenService.ITechTokenService;
 import service.TechTokenService.TechTokenService;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -124,7 +123,7 @@ public class TechTokenController {
         if (techToken != null) {
             confirmDeleteTechToken(techToken);
         } else {
-            System.out.println("Khong tim thay ma giao dich can xoa ");
+            System.out.println("Khong tim thay ma giao dich can xoa! ");
         }
     }
 
@@ -175,7 +174,7 @@ public class TechTokenController {
     }
 
     public boolean isValidPrice(double price) {
-        if(price >= 0.00000001) {
+        if (price >= 0.00000001) {
             return true;
         }
         return false;

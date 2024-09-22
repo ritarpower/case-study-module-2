@@ -5,8 +5,6 @@ import model.MemeToken;
 import service.MeMeTokenService.IMemeTokenService;
 import service.MeMeTokenService.MemeTokenService;
 
-
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -88,8 +86,8 @@ public class MemeTokenController {
             memeToken.setName(name);
             double price;
             do {
-            System.out.println("Nhap gia moi cua Token($): ");
-            price = Double.parseDouble(sc.nextLine());
+                System.out.println("Nhap gia moi cua Token($): ");
+                price = Double.parseDouble(sc.nextLine());
             } while (!isValidPrice(price));
             memeToken.setPrice(price);
             LocalDate date;
