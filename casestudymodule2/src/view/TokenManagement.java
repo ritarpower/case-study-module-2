@@ -109,6 +109,7 @@ public class TokenManagement {
     }
 
     public void manageAllMenu() {
+        System.out.println("\t\t\t\t---LICH SU GIAO DICH---");
         techTokenController.getAll();
         memeTokenController.getAll();
     }
