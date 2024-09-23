@@ -3,12 +3,9 @@ package common;
 import model.TechnologyToken;
 
 import java.io.*;
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class IOTechTokenFile {
     private static final String TECHTOKEN_PATH = "src/data/TechnologyToken.csv";
@@ -95,41 +92,5 @@ public class IOTechTokenFile {
                 return;
             }
         }
-    }
-
-    public boolean isValidCode(String code) {
-        Pattern pattern = Pattern.compile("^TC-\\d{3}$");
-        Matcher matcher = pattern.matcher(code);
-        return matcher.matches();
-    }
-
-    public boolean isValidSymbol(String symbol) {
-        Pattern pattern = Pattern.compile("^[A-Z]{3}$");
-        Matcher matcher = pattern.matcher(symbol);
-        return matcher.matches();
-    }
-
-    public boolean isValidName(String name) {
-        Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z0-9\\s]*$");
-        Matcher matcher = pattern.matcher(name);
-        return matcher.matches();
-    }
-
-    public boolean isValidPrice(double price) {
-        Pattern pattern = Pattern.compile("^(0\\.\\d{7,}|[1-9][0-9]*(\\.\\d+)?|0\\.[1-9]\\d*)$");
-        Matcher matcher = pattern.matcher(String.valueOf(price));
-        return matcher.matches();
-    }
-
-    public boolean isValidDate(LocalDate date) {
-        Pattern pattern = Pattern.compile("^\\d{4}[-|/]\\d{2}[-|/]\\d{2}$");
-        Matcher matcher = pattern.matcher(date.toString());
-        return matcher.matches();
-    }
-
-    public boolean isValidAmount(double amount) {
-        Pattern pattern = Pattern.compile("^(?=.[1-9])([0-9]*[.][0-9]+|[1-9][0-9]*|[0-9]+)$");
-        Matcher matcher = pattern.matcher(String.valueOf(amount));
-        return matcher.matches();
     }
 }
