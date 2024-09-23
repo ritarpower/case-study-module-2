@@ -55,7 +55,7 @@ public class IOMemeTokenFile {
                 memeTokens.add(memeToken);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Khong tim thay file!");
+            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
